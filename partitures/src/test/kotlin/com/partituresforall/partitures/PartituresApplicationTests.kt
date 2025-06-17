@@ -1,13 +1,15 @@
 package com.partituresforall.partitures
 
-import org.junit.jupiter.api.Test
-import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.autoconfigure.domain.EntityScan
+import org.springframework.boot.runApplication
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 
-@SpringBootTest
-class PartituresApplicationTests {
+@SpringBootApplication
+@EnableJpaRepositories("com.partituresforall.partitures.repositories")
+@EntityScan("com.partituresforall.partitures.models.entities")
+class PartituresApplication
 
-	@Test
-	fun contextLoads() {
-	}
-
+fun main(args: Array<String>) {
+	runApplication<PartituresApplication>(*args)
 }
