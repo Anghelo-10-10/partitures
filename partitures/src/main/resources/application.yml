@@ -1,0 +1,18 @@
+spring:
+  name: partitures
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/partitures_db
+    driver-class-name: org.postgresql.Driver
+    username: admin
+    password: admin
+
+  h2:
+    console:
+      enabled: true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL
